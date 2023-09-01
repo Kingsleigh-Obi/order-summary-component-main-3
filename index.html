@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Order summary card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution 
+    { font-size: 15px; 
+      text-align: center;
+      margin-top: 20px; 
+    }
+    .attribution a 
+    { color: hsl(228, 45%, 44%); 
+    
+    }
+
+    body
+    {
+      background-image: url(./images/pattern-background-desktop.svg);
+      margin: 0;
+      padding: 0;
+      font-family: 'Red Hat Display', sans-serif;
+    }
+
+    .container
+    {
+      width: 500px;
+      height: 600px;
+      border-radius: 20px;
+      margin-left: 350px;
+      margin-top: 50px;
+      background-color: white;
+    }
+
+    .svg-hero
+    {
+      width: 500px;
+      
+    }
+
+    .description
+    {
+      text-align: center;
+      
+    }
+
+    .box1
+    {
+      width: 370px;
+      height: 70px;
+      background-color: hsl(225, 100%, 94%);
+      margin-left: 50px;
+      border-radius: 10px;
+    }
+
+    .music-icon
+    {
+      margin-top: 10px;
+    }
+
+    .jump
+    {
+      float: left;
+    }
+
+    .annual
+    {
+      margin-top: -2px;
+      margin-left: 30px;
+      font-weight: 700;
+    }
+
+    .change
+    {
+      margin-top: -22px;
+      margin-left: 100px;
+      font-weight: 700;
+    }
+    
+    .price
+    {
+      margin-top: -5px;
+      margin-left: -80px;
+      font-weight: 500;
+      color: hsl(224, 23%, 55%);
+    }
+
+    button
+    {
+      clear: both;
+      width: 370px;
+      height: 50px;
+      background-color: hsl(245, 75%, 52%);
+      margin-left: 50px;
+      border-radius: 10px;
+      margin-top: 20px;
+      border-style: none;
+      margin-bottom: 20px;
+      font-weight: 700;
+      color: white;
+      font-size: 16px;
+    }
+
+    .cancel
+    {
+      text-decoration: none;
+      margin-left: 200px;
+      margin-top: 30px;
+      font-size: 16px;
+      color: hsl(224, 23%, 55%);
+      font-weight: 700;
+    }
+
+    .summary
+    {
+      font-family: 'Red Hat Display', sans-serif;
+    }
+
+    .weight1
+    {
+      font-weight: 900;
+    }
+
+    .details
+    {
+      font-family: 'Red Hat Display', sans-serif;
+      color: hsl(224, 23%, 55%);
+    }
+
+    .weight2
+    {
+      font-weight: 500;
+    }
+
+    p
+    {
+      font-size: 16px;
+    }
+
+    /* Inorder to make the web page respponsive */
+    
+    @media(max-width: 390px)
+    {
+      .container
+      {
+        width: 400px;
+        height: 600px;
+        border-radius: 20px;
+        margin-left: 30px;
+        margin-top: 100px;
+        background-color: white;
+      }
+
+      .svg-hero
+      {
+        width: 400px;
+        
+      }
+
+      .box1
+      {
+        width: 330px;
+        height: 70px;
+        background-color: hsl(225, 100%, 94%);
+        margin-left: 40px;
+        border-radius: 10px;
+      }
+
+      .music-icon
+      {
+        margin-top: 10px;
+      }
+
+    .jump
+    {
+      float: left;
+    }
+
+    .annual
+    {
+      margin-top: -2px;
+      margin-left: 10px;
+      font-weight: 700;
+    }
+
+    .change
+    {
+      margin-top: -22px;
+      margin-left: 100px;
+      font-weight: 700;
+    }
+    
+    .price
+    {
+      margin-top: -5px;
+      margin-left: -80px;
+      font-weight: 500;
+      color: hsl(224, 23%, 55%);
+    }
+
+    button
+    {
+      clear: both;
+      width: 330px;
+      height: 50px;
+      background-color: hsl(245, 75%, 52%);
+      margin-left: 40px;
+      border-radius: 10px;
+      margin-top: 20px;
+      border-style: none;
+      margin-bottom: 20px;
+      font-weight: 700;
+      color: white;
+      font-size: 16px;
+    }
+
+    .cancel
+    {
+      text-decoration: none;
+      margin-left: 150px;
+      margin-top: 30px;
+      font-size: 16px;
+      color: hsl(224, 23%, 55%);
+      font-weight: 700;
+    }
+
+    .summary
+    {
+      font-family: 'Red Hat Display', sans-serif;
+    }
+
+    .weight1
+    {
+      font-weight: 900;
+    }
+
+    .details
+    {
+      font-family: 'Red Hat Display', sans-serif;
+      color: hsl(224, 23%, 55%);
+    }
+
+    .weight2
+    {
+      font-weight: 500;
+    }
+
+    p
+    {
+      font-size: 16px;
+    }
+
+    .attribution 
+    { font-size: 15px; 
+      text-align: center;
+      margin-top: 80px; 
+    }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="./images/illustration-hero.svg" alt="" class="svg-hero">
+    <h1 class="description summary weight1">Order Summary</h1>
+
+    <p class="description details weight2">You can now listen to millions of songs, audiobooks, and podcasts on any 
+    device anywhere you like!
+    </p>
+  
+    <div class="box1">
+      <img src="./images/icon-music.svg" alt="" class="music-icon jump"><br>
+      <p class="annual jump">Annual Plan</p><br>
+      <p class="price jump">$59.99/year</p>
+      <a href="#" target="_blank" class="jump change">Change</a>
+    </div>
+
+    <button>Proceed to Payment</button><br>
+    <a href="#" class="cancel">Cancel Order</a>
+    
+    
+      <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.facebook.com/profile.php?id=100073253522573&mibextid=LQQJ4d">Kingsley Obiagwu</a>.
+      </div>
+  </div>
+  
+  
+</body>
+</html>
